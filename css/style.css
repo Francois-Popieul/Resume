@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #015958;
-    --secondary-color: #D8FFDB;
-    --tertiary-color: #C7FFED;
-    --highlight-color: #008F8C;
-    --link-color: #023535;
+    --primary-color: #065366;
+    --secondary-color: #FFFEF7;
+    --tertiary-color: #E3F1F7;
+    --highlight-color: #FFFEF7;
+    --link-color: #FFFEF7;
 }
 
 * {
@@ -13,34 +13,37 @@
 
 html {
     font-size: 15px;
-    background-color: aliceblue;
+    background-color: #FFFFFF;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
+    line-height: 1.45;
     margin: 0 auto;
     max-width: 1000px;
-    background-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
 }
 
 .header {
     background: var(--primary-color);
-    background: linear-gradient(212deg, rgba(1, 89, 88, 1) 0%, rgba(1, 89, 88, 1) 50%, rgba(0, 0, 0, 1) 100%);
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 .profile-photo {
     border-radius: 50%;
     width: 150px;
     margin-left: 20%;
-    transform: translateY(-60%);
+    transform: translateY(-50%);
     background-color: var(--link-color);
 }
 
-.flex-container {
+.row-flex-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
 
 .name {
@@ -58,7 +61,7 @@ body {
     margin-left: 40%;
 }
 
-.left-column {
+.left-column-flex-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -66,10 +69,10 @@ body {
     width: 35%;
     height: 100%;
     background-color: var(--tertiary-color);
-    padding: 0 0.75rem;
+    padding: 0 0.5rem 0 1rem;
 }
 
-.right-column {
+.right-column-flex-container {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -77,99 +80,59 @@ body {
     width: 65%;
     padding: 0 10px 0 1rem;
     background-color: var(--secondary-color);
-    border-left: solid 2px var(--highlight-color);
 }
 
 .title {
     color: var(--primary-color);
     font-weight: 600;
-
+    margin: 1.1rem 0;
+    font-variant: small-caps;
 }
 
 .introduction {
     text-align: left;
     margin: 1rem 0 0 0;
+    text-align: left;
+    width: 100%;
 }
 
 .translated-container {
-    transform: translateY(-100px);
+    transform: translateY(-60px);
 }
 
-.divider {
+.light-divider {
     border: none;
-    border-top: 2px solid var(--highlight-color);
+    border-top: 3px solid var(--highlight-color);
     color: var(--primary-color);
     overflow: visible;
     width: 75%;
-    margin: 0.8rem auto;
-}
-
-.grid-container {
-    display: grid;
-    grid-row: auto;
-    grid-template-columns: 82% 18%;
-    column-gap: 1rem;
-    row-gap: 0.5rem;
-    margin-left: 14px;
-}
-
-.grid-container-element-1 {
-    grid-row: 1;
-    grid-column: 1;
-}
-
-.grid-container-detail-1 {
-    grid-row: 1;
-    grid-column: 2;
-    text-align: center;
-}
-
-.grid-container-element-2 {
-    grid-row: 2;
-    grid-column: 1;
-}
-
-.grid-container-detail-2 {
-    grid-row: 2;
-    grid-column: 2;
-    text-align: center;
-}
-
-.grid-container-element-3 {
-    grid-row: 3;
-    grid-column: 1;
-}
-
-.grid-container-detail-3 {
-    grid-row: 3;
-    grid-column: 2;
-    text-align: center;
-}
-
-.grid-container-element-4 {
-    grid-row: 4;
-    grid-column: 1;
-}
-
-.grid-container-detail-4 {
-    grid-row: 4;
-    grid-column: 2;
-    text-align: center;
+    margin: 1rem auto;
 }
 
 .job {
     font-size: 1rem;
     font-weight: 600;
+    width: 450px;
+    text-align: left;
+    list-style: none;
+    padding-bottom: 0.5rem;
+
 }
 
 .job-detail {
     font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: normal;
+    font-weight: normal;
 }
 
 .job-period {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    column-width: 80px;
+    text-align: right;
+}
+
+.left-border {
+    border-left: solid 2px var(--primary-color);
+    margin-left: 1.5rem;
 }
 
 .bold {
@@ -191,6 +154,7 @@ body {
     column-gap: 0.5rem;
     text-align: left;
     width: 100%;
+    padding-left: 2.25rem;
 }
 
 .soft-skill-container {
@@ -221,11 +185,10 @@ ul {
 }
 
 li {
-    margin-bottom: 2px;
+    margin-bottom: 0.5rem;
 }
 
 a {
-    color: var(--primary-color);
     text-decoration: none;
 }
 
